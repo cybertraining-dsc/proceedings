@@ -1,0 +1,30 @@
+---
+metadata:
+  image: "cover.png"
+  title: "Introduction to Python"
+  subtitle: "for Cloud Computing"
+  author: 'Gregor von Laszewski'
+  subauthor: "Editor"
+  email: "laszewski@gmail.com"
+  url: "https://github.com/cyberaide/bookmanager"
+  description: "Book creator"
+  abstract: "my abstract"
+  keywords: "pandoc"
+  stylesheet: "epub.css"
+  dest: "dest/book"
+  filename: "vonLaszewski-python.epub"
+git:
+  "umaa": "https://raw.githubusercontent.com/cloudmesh-community/hid-sp18-710/master/"
+  "umab": "https://raw.githubusercontent.com/cloudmesh-community/hid-sp18-709/master"
+  "book": "https://raw.githubusercontent.com/cloudmesh-community/book/master/chapters"
+  "credit": "https://raw.githubusercontent.com/cyberaide/bookmanager/master/bookmanager/template"
+BOOK:
+  - PREFACE:
+    - "{git.credit}/disclaimer.md"
+  - UMA:
+      - PAPER1:
+        - "{git.umaa}/paper/paper.md"
+      - PAPER2:
+        - "{git.umab}/paper/paper.md"
+      - PROJECT:
+        - "{git.umaa}/project-report/report.md"
