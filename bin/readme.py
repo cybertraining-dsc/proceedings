@@ -16,8 +16,8 @@ for repo in repos["spring19"]:
     else:
         repos_516.append(repo)
 
-print (repos_222)
-print (repos_516)
+#print (repos_222)
+#print (repos_516)
 
 
 community="https://github.com/cloudmesh-community"
@@ -61,7 +61,7 @@ def class_artifact(repos, kind):
             t.append([owner.hid, owner.firstname, owner.lastname, owner.community, owner.semester, url, kind, title, artifact])
 
 
-            print (data[kind])
+            # print (data[kind])
             if kind in data:
                 artifacts = data[kind]
                 for artifact in artifacts:
@@ -74,10 +74,11 @@ def class_artifact(repos, kind):
                     t.append([owner.hid, owner.firstname, owner.lastname,
                               owner.community, owner.semester, url, kind, title,
                               artifact_url])
-
+            t.append(["", "", "", "", "", "", "", "",""])
         except Exception as e:
-            print (e)
-            VERBOSE(repo)
+            #print (e)
+            #VERBOSE(repo)
+            pass
 
     print()
     print(tabulate(t, headers=headers))
@@ -87,4 +88,12 @@ def class_artifact(repos, kind):
 
 #class_table(repos_516)
 
+VERBOSE("PROJECT")
 class_artifact(repos_516, "project")
+
+VERBOSE("CHAPTER")
+class_artifact(repos_516, "chapter")
+class_artifact(repos_516, "section")
+class_artifact(repos_516, "paper")
+
+
