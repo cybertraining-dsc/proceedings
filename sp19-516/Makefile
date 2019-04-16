@@ -7,7 +7,7 @@ all: clean
 contrib:
 	python ../bin/readme.py contrib 516 ../../.. > contributors.md
 	git commit -m "upload contributors" contributors.md
-	git push contributors.md
+	git push
 
 clean:
 	rm -rf dest
