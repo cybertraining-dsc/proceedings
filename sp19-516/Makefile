@@ -11,3 +11,6 @@ contrib:
 
 clean:
 	rm -rf dest
+
+view:
+	open ../*516*.epub

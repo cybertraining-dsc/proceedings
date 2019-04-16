@@ -14,15 +14,16 @@ metadata:
   dest: "dest/book"
   filename: "vonLaszewski-516-sp19.epub"
 git:
+  "book": "https://raw.githubusercontent.com/cloudmesh-community/book/master/chapters"
   "proceedings": "https://raw.githubusercontent.com/cloudmesh-community/proceedings/master/sp19-516/"
   "umaa": "https://raw.githubusercontent.com/cloudmesh-community/hid-sp18-710/master"
   "umab": "https://raw.githubusercontent.com/cloudmesh-community/hid-sp18-709/master"
-  "book": "https://raw.githubusercontent.com/cloudmesh-community/book/master/chapters"
   "bookmanager": "https://raw.githubusercontent.com/cyberaide/bookmanager/master/bookmanager/template"
 BOOK:
   - PREFACE:
     - "{git.proceedings}/contributors.md"
     - "{git.bookmanager}/disclaimer.md"
+    - "{git.book}/preface/notation.md"
   - UMA:
     - "{git.bookmanager}/empty.md"
     - NOSQL:
