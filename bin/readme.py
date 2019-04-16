@@ -28,17 +28,63 @@ def class_table(repos):
     t = []
 
     for repo in repos:
-        print()
-        VERBOSE(repo)
-        content = readfile(f"./../{repo}/README.yml")
-        data = yaml.load(content, Loader=yaml.SafeLoader)
-        owner = dotdict(data["owner"])
-        url = f"{community}/{repo}"
-        t.append([owner.hid, owner.firstname, owner.lastname, owner.community, owner.semester, url])
+        try:
+            content = readfile(f"./../{repo}/README.yml")
+            data = yaml.load(content, Loader=yaml.SafeLoader)
+            owner = dotdict(data["owner"])
+            url = f"{community}/{repo}"
+            t.append([owner.hid, owner.firstname, owner.lastname, owner.community, owner.semester, url])
+        except Exception as e:
+            print (e)
+            VERBOSE(repo)
 
+    print()
     print(tabulate(t, headers=headers))
+    print()
 
 
-class_table(repos_222)
 
-class_table(repos_516)
+
+def class_artifact(repos, kind):
+    global community
+    headers = ["hid", "firstname", "lastname", "community", "semester", "url", "kind", "title", "Artifact"]
+    t = []
+
+    for repo in repos:
+        artifact = ""
+        title = ""
+        try:
+            content = readfile(f"./../{repo}/README.yml")
+            data = yaml.load(content, Loader=yaml.SafeLoader)
+            owner = dotdict(data["owner"])
+            url = f"{community}/{repo}"
+            t.append([owner.hid, owner.firstname, owner.lastname, owner.community, owner.semester, url, kind, title, artifact])
+
+
+            print (data[kind])
+            if kind in data:
+                artifacts = data[kind]
+                for artifact in artifacts:
+                    title = "TBD"
+                    artifact_url = "TBD"
+                    if "title" in artifact:
+                        title = artifact["title"]
+                    if "url" in artifact:
+                        artifact_url = artifact["url"]
+                    t.append([owner.hid, owner.firstname, owner.lastname,
+                              owner.community, owner.semester, url, kind, title,
+                              artifact_url])
+
+        except Exception as e:
+            print (e)
+            VERBOSE(repo)
+
+    print()
+    print(tabulate(t, headers=headers))
+    print()
+
+#class_table(repos_222)
+
+#class_table(repos_516)
+
+class_artifact(repos_516, "project")
