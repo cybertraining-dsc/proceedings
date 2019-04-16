@@ -203,7 +203,7 @@ def main():
             print ("your class is not yet supported")
             sys.exit(10)
 
-        owners = class_list(repos_516, location)
+        owners = class_list(repos, location)
         create_contributors(owners, location)
 
 
