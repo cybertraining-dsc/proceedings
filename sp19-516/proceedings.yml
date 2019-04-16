@@ -22,11 +22,11 @@ BOOK:
   - PREFACE:
     - "{git.credit}/disclaimer.md"
   - UMA:
-    - PAPER1:
+    - NOSQL:
       - "{git.umaa}/paper/paper.md"
-    - PAPER2:
+    - SECURITY:
       - "{git.umab}/paper/paper.md"
-    - PROJECT:
+    - VIOLENCE:
       - "{git.umaa}/project-report/report.md"
   - REFERENCES:
     - "{git.credit}/disclaimer-references.md"

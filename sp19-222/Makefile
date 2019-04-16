@@ -1,9 +1,9 @@
-EPUB=`fgrep "filename:" proceedings.yml | sed "s/\"//g" | sed 's/filename: //'`
-
 
 all: clean
 	bookmanager proceedings.yml get --force
-	cp dest/$(EPUB) ..
+	cp dest/*.epub ..
+	bookmanager proceedings.yml list
+
 
 clean:
 	rm -rf dest
