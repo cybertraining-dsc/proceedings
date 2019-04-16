@@ -1,9 +1,9 @@
 ---
 metadata:
   image: "cover.png"
-  title: "Introduction to Python"
+  title: "Inteligent Systems Engineering"
   subtitle: "for Cloud Computing"
-  author: 'Gregor von Laszewski'
+  author: 'G. C. Fox, G. von Laszewski'
   subauthor: "Editor"
   email: "laszewski@gmail.com"
   url: "https://github.com/cyberaide/bookmanager"
@@ -12,7 +12,7 @@ metadata:
   keywords: "pandoc"
   stylesheet: "epub.css"
   dest: "dest/book"
-  filename: "vonLaszewski-python.epub"
+  filename: "vonLaszewski-sp19-222.epub"
 git:
   "umaa": "https://raw.githubusercontent.com/cloudmesh-community/hid-sp18-710/master"
   "umab": "https://raw.githubusercontent.com/cloudmesh-community/hid-sp18-709/master"
