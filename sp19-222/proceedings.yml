@@ -1,9 +1,9 @@
 ---
 metadata:
   image: "cover.png"
-  title: "Cloud Computing"
+  title: "Intelligent Systems Engineering"
   subtitle: "Proceedings Spring 2019"
-  author: 'Gregor von Laszewski'
+  author: 'G. C. Fox, G. von Laszewski, T. Balson'
   subauthor: "Editor"
   email: "laszewski@gmail.com"
   url: "https://github.com/cyberaide/bookmanager"
@@ -12,22 +12,19 @@ metadata:
   keywords: "pandoc"
   stylesheet: "epub.css"
   dest: "dest/book"
-  filename: "vonLaszewski-516-sp19.epub"
+  filename: "vonLaszewski-222-sp19.epub"
 git:
+  "community": "https://raw.githubusercontent.com/cloudmesh-community"
+  "proceedings": "https://raw.githubusercontent.com/cloudmesh-community/proceedings/master/sp19-222/"
   "umaa": "https://raw.githubusercontent.com/cloudmesh-community/hid-sp18-710/master"
   "umab": "https://raw.githubusercontent.com/cloudmesh-community/hid-sp18-709/master"
   "book": "https://raw.githubusercontent.com/cloudmesh-community/book/master/chapters"
   "bookmanager": "https://raw.githubusercontent.com/cyberaide/bookmanager/master/bookmanager/template"
 BOOK:
   - PREFACE:
+    - "{git.proceedings}/contributors.md"
     - "{git.bookmanager}/disclaimer.md"
-  - UMA:
-    - "{git.bookmanager}/empty.md"
-    - NOSQL:
-      - "{git.umaa}/paper/paper.md"
-    - SECURITY:
-      - "{git.umab}/paper/paper.md"
-    - VIOLENCE:
-      - "{git.umaa}/project-report/report.md"
+  - SPAM:
+    - "{git.community}/sp19-222-101/master/project-report/report.md"
   - REFERENCES:
     - "{git.bookmanager}/disclaimer-references.md"
