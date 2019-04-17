@@ -21,6 +21,7 @@ Description:
         COMMUNITY is the directory with all the class repos
 
 """
+import requests
 import sys
 from pathlib import Path
 
@@ -244,15 +245,26 @@ def main():
             if "url" in entry:
                 entry["link"] = entry["url"]
                 if ".md" not in entry["url"]:
-                    entry["url"] = None
+                    entry["link"] = entry["url"] = None
             else:
                 entry["link"] = entry["url"] = None
 
             title = entry["title"]
 
             url = entry["url"]
+
             if url is not None:
-                url = f"[url]({url})"
+                try:
+
+                    r = requests.get(url, allow_redirects=True)
+                    if r.status_code == 200:
+                        url = f"[url]({url})"
+                    else:
+                        url = ":o: invalid "
+
+                except:
+                    url = ":o: invalid "
+
             else:
                 url = ":o: ERROR: not an md file"
 
@@ -265,7 +277,7 @@ def main():
                     entry["lastname"],
                     entry["firstname"],
                     url,
-                    f"[{title}]({link})",
+                    title
                 ])
 
         print(tabulate(t,
