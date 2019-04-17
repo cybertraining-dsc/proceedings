@@ -21,26 +21,25 @@ git:
   "book": "https://raw.githubusercontent.com/cloudmesh-community/book/master/chapters"
   "bookmanager": "https://raw.githubusercontent.com/cyberaide/bookmanager/master/bookmanager/template"
 project:
-  "report": master/project-report/report.md
+  "report": "master/project-report/report.md"
 BOOK:
   - PREFACE:
     - "{git.proceedings}/contributors.md"
     - "{git.bookmanager}/disclaimer.md"
     - "{git.book}/preface/notation.md"
   - PROJECTS:
-    - {git.community}/sp19-222-89/{project.report}
-    - {git.community}/sp19-222-90/{project.report}
-    - {git.community}/sp19-222-91/{project.report}
-    - {git.community}/sp19-222-92/{project.report}
-    - {git.community}/sp19-222-93/{project.report}
-    - {git.community}/sp19-222-94/{project.report}
-    - {git.community}/sp19-222-95/{project.report}
-    - {git.community}/sp19-222-96/{project.report}
-    - {git.community}/sp19-222-97/{project.report}
-    - {git.community}/sp19-222-98/{project.report}
-    - {git.community}/sp19-222-99/{project.report}
-    - {git.community}/sp19-222-100/{project.report}
-    - {git.community}/sp19-222-101/{project.report}
-    - {git.community}/sp19-222-102/{project.report}
-- REFERENCES:
+    - "{git.community}/sp19-222-89/{project.report}"
+    - "{git.community}/sp19-222-90/{project.report}"
+    - "{git.community}/sp19-222-91/{project.report}"
+    - "{git.community}/sp19-222-92/{project.report}"
+    - "{git.community}/sp19-222-93/{project.report}"
+    - "{git.community}/sp19-222-94/{project.report}"
+    - "{git.community}/sp19-222-95/{project.report}"
+    - "{git.community}/sp19-222-96/{project.report}"
+    - "{git.community}/sp19-222-97/{project.report}"
+    - "{git.community}/sp19-222-98/{project.report}"
+    - "{git.community}/sp19-222-100/{project.report}"
+    - "{git.community}/sp19-222-101/{project.report}"
+    - "{git.community}/sp19-222-102/{project.report}"
+  - REFERENCES:
     - "{git.bookmanager}/disclaimer-references.md"
