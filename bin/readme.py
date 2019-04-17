@@ -281,7 +281,7 @@ def main():
                 ])
 
         print(tabulate(t,
-                       headers=["Hid", "Lastname", "Firstname", "Url", "Title"],
+                       headers=["Hid", "Lastname", "Firstname", "Url to md", "Title"],
                        tablefmt=arguments["--format"]))
 
 
