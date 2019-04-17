@@ -277,11 +277,12 @@ def main():
                     entry["lastname"],
                     entry["firstname"],
                     url,
+                    "",
                     title
                 ])
 
         print(tabulate(t,
-                       headers=["Hid", "Lastname", "Firstname", "Url to md", "Title"],
+                       headers=["Hid", "Lastname", "Firstname", "Url to md", "Pytests", "Title"],
                        tablefmt=arguments["--format"]))
 
 
