@@ -1,5 +1,6 @@
 # Project List
 
+| Hid          | Lastname       | Firstname     | Url                                                                                             | Title                                                                                                                                                    |
 |--------------|----------------|---------------|-------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------|
 | fa18-516-22  | Sims           | Ian           | [url](https://github.com/cloudmesh-community/fa18-516-22/blob/master/project-report/report.md)  | [Open API with AWS EMR and Jupyter](https://github.com/cloudmesh-community/fa18-516-22/blob/master/project-report/report.md)                             |
 | fa18-516-26  | Andalibi       | Vafa          | ERROR: not an md file                                                                           | [Developing the virtual cluster tools in cm4 (cm4 vcluster)](https://github.com/cloudmesh-community/cm/tree/master/cm4/vcluster)                         |
