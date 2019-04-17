@@ -2,16 +2,16 @@
 
 Usage:
   readme contrib CLASS DIRECTORY [-v]
-  readme projects CLASS DIRECTORY [-v]
+  readme projects CLASS DIRECTORY [-v] [--format=FORMAT]
   readme sections CLASS DIRECTORY [-v]
-  readme chaptersCLASS DIRECTORY [-v]
+  readme chapters CLASS DIRECTORY [-v]
 
 Arguments:
   YAML   the yaml file
 
 Options:
   -h --help
-  -f, --format=FORMAT     [default: markdown]
+  -f, --format=FORMAT     [default: github]
 
 Description:
 
@@ -22,20 +22,17 @@ Description:
 
 """
 import sys
-from  cloudmesh_installer.install.installer import repos
-from pprint import pprint
-import oyaml as yaml
-from cloudmesh.common.util import readfile, path_expand
-#pprint(repos)
-from cloudmesh.DEBUG import VERBOSE
-from tabulate import tabulate
-from cloudmesh.common.dotdict import dotdict
-from docopt import docopt
-from cloudmesh.variables import Variables
-from cloudmesh.common.Printer import Printer
-
 from pathlib import Path
 
+import oyaml as yaml
+# pprint(repos)
+from cloudmesh.DEBUG import VERBOSE
+from cloudmesh.common.dotdict import dotdict
+from cloudmesh.common.util import readfile, path_expand
+from cloudmesh.variables import Variables
+from cloudmesh_installer.install.installer import repos
+from docopt import docopt
+from tabulate import tabulate
 
 repos_516 = []
 repos_222 = []
@@ -50,32 +47,32 @@ for repo in repos["spring19"]:
     else:
         repos_516.append(repo)
 
-#print (repos_222)
-#print (repos_516)
+# print (repos_222)
+# print (repos_516)
 
 
-community="https://github.com/cloudmesh-community"
+community = "https://github.com/cloudmesh-community"
 
 
 def class_list(repos, location):
     global community
-    headers = ["hid", "firstname", "lastname", "community", "semester", "url"]
+
     owners = []
 
     for repo in repos:
         try:
-            path = Path(f"{location}/{repo}/README.yml").resolve()
+            path = f"{location}/{repo}/README.yml"
+            path = Path(path).resolve()
             content = readfile(path)
             data = yaml.load(content, Loader=yaml.SafeLoader)
             owner = dotdict(data["owner"])
             owner["url"] = f"{community}/{repo}"
             owners.append(owner)
         except Exception as e:
-            print (e)
+            print(e)
             VERBOSE(repo)
 
     return owners
-
 
 
 def class_table(repos):
@@ -89,9 +86,11 @@ def class_table(repos):
             data = yaml.load(content, Loader=yaml.SafeLoader)
             owner = dotdict(data["owner"])
             url = f"{community}/{repo}"
-            t.append([owner.hid, owner.firstname, owner.lastname, owner.community, owner.semester, url])
+            t.append(
+                [owner.hid, owner.firstname, owner.lastname, owner.community,
+                 owner.semester, url])
         except Exception as e:
-            print (e)
+            print(e)
             VERBOSE(repo)
 
     print()
@@ -99,11 +98,10 @@ def class_table(repos):
     print()
 
 
-
-
 def class_artifact(repos, kind):
     global community
-    headers = ["hid", "firstname", "lastname", "community", "semester", "url", "kind", "title", "Artifact"]
+    headers = ["hid", "firstname", "lastname", "community", "semester", "url",
+               "kind", "title", "Artifact"]
     t = []
 
     for repo in repos:
@@ -114,8 +112,9 @@ def class_artifact(repos, kind):
             data = yaml.load(content, Loader=yaml.SafeLoader)
             owner = dotdict(data["owner"])
             url = f"{community}/{repo}"
-            t.append([owner.hid, owner.firstname, owner.lastname, owner.community, owner.semester, url, kind, title, artifact])
-
+            t.append(
+                [owner.hid, owner.firstname, owner.lastname, owner.community,
+                 owner.semester, url, kind, title, artifact])
 
             # print (data[kind])
             if kind in data:
@@ -130,19 +129,20 @@ def class_artifact(repos, kind):
                     t.append([owner.hid, owner.firstname, owner.lastname,
                               owner.community, owner.semester, url, kind, title,
                               artifact_url])
-            t.append(["", "", "", "", "", "", "", "",""])
+            t.append(["", "", "", "", "", "", "", "", ""])
         except Exception as e:
-            #print (e)
-            #VERBOSE(repo)
+            # print (e)
+            # VERBOSE(repo)
             pass
 
     print()
     print(tabulate(t, headers=headers))
     print()
 
-#class_table(repos_222)
 
-#class_table(repos_516)
+# class_table(repos_222)
+
+# class_table(repos_516)
 """
 VERBOSE("PROJECT")
 class_artifact(repos_516, "project")
@@ -154,15 +154,11 @@ class_artifact(repos_516, "paper")
 """
 
 
-
 def create_contributors(owners, location):
-
-
     #
     # BUG repo not defined
     #
     global community
-    path = Path(f"{location}/{repo}/README.yml").resolve()
 
     print("# Contributors")
     print()
@@ -182,10 +178,7 @@ def create_contributors(owners, location):
 
         ]
         t.append(entry)
-    print (tabulate(t, headers=headers, tablefmt="github"))
-
-
-
+    print(tabulate(t, headers=headers, tablefmt="github"))
 
 
 def artifact_list(repos, kind, location):
@@ -198,7 +191,6 @@ def artifact_list(repos, kind, location):
         try:
             content = readfile(path)
             data = yaml.load(content, Loader=yaml.SafeLoader)
-            url = f"{community}/{repo}"
             if kind in data:
                 for entry in data[kind]:
                     # print (type(entry), type(data["owner"]))
@@ -207,10 +199,11 @@ def artifact_list(repos, kind, location):
                     # print (entry)
                     artifacts.append(entry)
         except Exception as e:
-            print (e)
+            print(e)
             VERBOSE(repo)
             pass
     return artifacts
+
 
 def main():
     arguments = dotdict(docopt(__doc__))
@@ -221,7 +214,7 @@ def main():
     else:
         v["verbose"] = "0"
 
-    #arguments["FORMAT"] = arguments["--format"]
+    # arguments["FORMAT"] = arguments["--format"]
     location = path_expand(arguments.DIRECTORY)
 
     VERBOSE(arguments)
@@ -241,9 +234,8 @@ def main():
 
     elif arguments.projects:
 
-
-        print ("# Project List")
-        print ()
+        print("# Project List")
+        print()
         artifacts = artifact_list(repos, "project", location)
 
         t = []
@@ -276,7 +268,9 @@ def main():
                     f"[{title}]({link})",
                 ])
 
-        print(tabulate(t, tablefmt="github"))
+        print(tabulate(t,
+                       headers=["Hid", "Lastname", "Firstname", "Url", "Title"],
+                       tablefmt=arguments["--format"]))
 
 
 if __name__ == '__main__':
