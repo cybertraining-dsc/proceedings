@@ -4,6 +4,11 @@ all: clean
 	cp dest/*.epub ..
 	bookmanager proceedings.yml list
 
+projects:
+	python ../bin/readme.py projects 516 ../../.. > projects.md
+	git commit -m "upload project list" projects.md
+	git push
+
 contrib:
 	python ../bin/readme.py contrib 516 ../../.. > contributors.md
 	git commit -m "upload contributors" contributors.md

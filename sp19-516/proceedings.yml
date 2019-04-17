@@ -22,6 +22,7 @@ git:
 BOOK:
   - PREFACE:
     - "{git.proceedings}/contributors.md"
+    - "{git.proceedings}/projects.md"
     - "{git.bookmanager}/disclaimer.md"
     - "{git.book}/preface/notation.md"
   - UMA:

@@ -2,6 +2,9 @@
 
 Usage:
   readme contrib CLASS DIRECTORY [-v]
+  readme projects CLASS DIRECTORY [-v]
+  readme sections CLASS DIRECTORY [-v]
+  readme chaptersCLASS DIRECTORY [-v]
 
 Arguments:
   YAML   the yaml file
@@ -29,6 +32,7 @@ from tabulate import tabulate
 from cloudmesh.common.dotdict import dotdict
 from docopt import docopt
 from cloudmesh.variables import Variables
+from cloudmesh.common.Printer import Printer
 
 from pathlib import Path
 
@@ -153,6 +157,10 @@ class_artifact(repos_516, "paper")
 
 def create_contributors(owners, location):
 
+
+    #
+    # BUG repo not defined
+    #
     global community
     path = Path(f"{location}/{repo}/README.yml").resolve()
 
@@ -178,6 +186,32 @@ def create_contributors(owners, location):
 
 
 
+
+
+def artifact_list(repos, kind, location):
+    global community
+    artifacts = []
+
+    for repo in repos:
+        # print ("Analyzing:", kind, repo)
+        path = Path(f"{location}/{repo}/README.yml").resolve()
+        try:
+            content = readfile(path)
+            data = yaml.load(content, Loader=yaml.SafeLoader)
+            url = f"{community}/{repo}"
+            if kind in data:
+                for entry in data[kind]:
+                    # print (type(entry), type(data["owner"]))
+                    # print (entry, data["owner"])
+                    entry.update(data["owner"])
+                    # print (entry)
+                    artifacts.append(entry)
+        except Exception as e:
+            print (e)
+            VERBOSE(repo)
+            pass
+    return artifacts
+
 def main():
     arguments = dotdict(docopt(__doc__))
     verbose = arguments["-v"]
@@ -192,19 +226,57 @@ def main():
 
     VERBOSE(arguments)
 
+    if arguments.CLASS in ["5", "516", "e516"]:
+        repos = repos_516
+    elif arguments.CLASS in ["2", "222", "e222"]:
+        repos = repos_222
+    else:
+        print("your class is not yet supported")
+        sys.exit(10)
 
     if arguments.contrib:
 
-        if arguments.CLASS in ["5", "516", "e516"]:
-            repos = repos_516
-        elif arguments.CLASS in ["2", "222", "e222"]:
-            repos = repos_222
-        else:
-            print ("your class is not yet supported")
-            sys.exit(10)
-
         owners = class_list(repos, location)
         create_contributors(owners, location)
+
+    elif arguments.projects:
+
+
+        print ("# Project List")
+        print ()
+        artifacts = artifact_list(repos, "project", location)
+
+        t = []
+        for entry in artifacts:
+
+            if "url" in entry:
+                entry["link"] = entry["url"]
+                if not entry["url"].endswith('.md'):
+                    entry["url"] = None
+            else:
+                entry["link"] = entry["url"] = None
+
+            title = entry["title"]
+
+            url = entry["url"]
+            if url is not None:
+                url = f"[url]({url})"
+            else:
+                url = "ERROR: not an md file"
+
+            if "TBD" == title:
+                title = "ERROR: no title specified"
+            link = entry["link"]
+            if entry["lastname"] != "TBD":
+                t.append([
+                    entry["hid"],
+                    entry["lastname"],
+                    entry["firstname"],
+                    url,
+                    f"[{title}]({link})",
+                ])
+
+        print(tabulate(t, tablefmt="github"))
 
 
 if __name__ == '__main__':
