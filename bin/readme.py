@@ -254,10 +254,10 @@ def main():
             if url is not None:
                 url = f"[url]({url})"
             else:
-                url = "ERROR: not an md file"
+                url = ":o: ERROR: not an md file"
 
             if "TBD" == title:
-                title = "ERROR: no title specified"
+                title = ":o: ERROR: no title specified"
             link = entry["link"]
             if entry["lastname"] != "TBD":
                 t.append([
