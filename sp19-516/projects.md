@@ -1,42 +1,5 @@
 # Project List
 
-https://github.com/cloudmesh-community/fa18-516-22/blob/master/project-report/report.md
-https://github.com/cloudmesh-community/fa18-516-22/blob/master/project-report/report.md
-None
-None
-https://github.com/cloudmesh-community/fa18-516-29/tree/master/project-report/report.md
-https://github.com/cloudmesh-community/fa18-516-29/tree/master/project-report/report.md
-None
-None
-None
-https://github.com/cloudmesh-community/hid-sp18-523/tree/master/project-report/report.md
-https://github.com/cloudmesh-community/hid-sp18-523/tree/master/project-report/report.md
-https://github.com/cloudmesh-community/hid-sp18-602/tree/master/project-report/report.md
-https://github.com/cloudmesh-community/hid-sp18-602/tree/master/project-report/report.md
-https://github.com/cloudmesh-community/hid-sp18-709/blob/master/project-report/report.md
-https://github.com/cloudmesh-community/hid-sp18-709/blob/master/project-report/report.md
-https://github.com/cloudmesh-community/hid-sp18-710/blob/master/project-report/report.md
-https://github.com/cloudmesh-community/hid-sp18-710/blob/master/project-report/report.md
-None
-None
-None
-None
-None
-None
-None
-None
-None
-None
-None
-None
-None
-None
-None
-None
-None
-None
-https://github.com/cloudmesh-community/sp19-616-112/blob/master/project-proposal.md
-https://github.com/cloudmesh-community/sp19-616-112/blob/master/project-proposal.md
 | Hid                                                                 | Lastname       | Firstname     | Url                                                                                             | Title                                                                                                                                                       |
 |---------------------------------------------------------------------|----------------|---------------|-------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | [fa18-516-22](https://github.com/cloudmesh-community/fa18-516-22)   | Sims           | Ian           | [url](https://github.com/cloudmesh-community/fa18-516-22/blob/master/project-report/report.md)  | [Open API with AWS EMR and Jupyter](https://github.com/cloudmesh-community/fa18-516-22/blob/master/project-report/report.md)                                |
