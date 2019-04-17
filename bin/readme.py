@@ -243,7 +243,7 @@ def main():
 
             if "url" in entry:
                 entry["link"] = entry["url"]
-                if not entry["url"].endswith('.md'):
+                if ".md" not in entry["url"]:
                     entry["url"] = None
             else:
                 entry["link"] = entry["url"] = None
@@ -261,7 +261,7 @@ def main():
             link = entry["link"]
             if entry["lastname"] != "TBD":
                 t.append([
-                    entry["hid"],
+                    "[{hid}](https://github.com/cloudmesh-community/{hid})".format(**entry),
                     entry["lastname"],
                     entry["firstname"],
                     url,
