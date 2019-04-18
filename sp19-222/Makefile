@@ -9,6 +9,9 @@ contrib:
 	git commit -m "upload contributors" contributors.md
 	git push
 
+contrib:
+	python ../bin/readme.py contrib 222 ../../..
+
 clean:
 	rm -rf dest
 

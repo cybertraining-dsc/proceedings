@@ -34,6 +34,7 @@ from cloudmesh.variables import Variables
 from cloudmesh_installer.install.installer import repos
 from docopt import docopt
 from tabulate import tabulate
+from pprint import pprint
 
 repos_516 = []
 repos_222 = []
@@ -232,6 +233,116 @@ def main():
 
         owners = class_list(repos, location)
         create_contributors(owners, location)
+
+    elif arguments.sections:
+
+        print("# Section List")
+        print()
+        artifacts = artifact_list(repos, "section", location)
+
+        t = []
+        for entry in artifacts:
+            if "url" in entry:
+                entry["link"] = entry["url"]
+                if ".md" not in entry["url"]:
+                    entry["link"] = entry["url"] = None
+            else:
+                entry["link"] = entry["url"] = None
+
+            if "title" not in entry:
+                entry["title"] = "TBD"
+
+            title = entry["title"]
+
+            url = entry["url"]
+
+            if url is not None:
+                try:
+                    r = requests.get(url, allow_redirects=True)
+                    if r.status_code == 200:
+                        url = f"[url]({url})"
+                    else:
+                        url = ":o: invalid "
+
+                except:
+                    url = ":o: invalid "
+
+            else:
+                url = ":o: ERROR: not an md file"
+
+            if "TBD" == title:
+                title = ":o: ERROR: no title specified"
+            link = entry["link"]
+            if entry["lastname"] != "TBD":
+                t.append([
+                    "[{hid}](https://github.com/cloudmesh-community/{hid})".format(
+                        **entry),
+                    entry["lastname"],
+                    entry["firstname"],
+                    url,
+                    title
+                ])
+
+        print(tabulate(t,
+                       headers=["Hid", "Lastname", "Firstname", "Url to md",
+                                "Title"],
+                       tablefmt=arguments["--format"]))
+
+
+    elif arguments.chapters:
+
+        print("# Chapter List")
+        print()
+        artifacts = artifact_list(repos, "chapter", location)
+
+        t = []
+        for entry in artifacts:
+            if "url" in entry:
+                entry["link"] = entry["url"]
+                if ".md" not in entry["url"]:
+                    entry["link"] = entry["url"] = None
+            else:
+                entry["link"] = entry["url"] = None
+
+            if "title" not in entry:
+                entry["title"] = "TBD"
+
+            title = entry["title"]
+
+            url = entry["url"]
+
+            if url is not None:
+                try:
+                    r = requests.get(url, allow_redirects=True)
+                    if r.status_code == 200:
+                        url = f"[url]({url})"
+                    else:
+                        url = ":o: invalid "
+
+                except:
+                    url = ":o: invalid "
+
+            else:
+                url = ":o: ERROR: not an md file"
+
+            if "TBD" == title:
+                title = ":o: ERROR: no title specified"
+            link = entry["link"]
+            if entry["lastname"] != "TBD":
+                t.append([
+                    "[{hid}](https://github.com/cloudmesh-community/{hid})".format(
+                        **entry),
+                    entry["lastname"],
+                    entry["firstname"],
+                    url,
+                    title
+                ])
+
+        print(tabulate(t,
+                       headers=["Hid", "Lastname", "Firstname", "Url to md",
+                                "Title"],
+                       tablefmt=arguments["--format"]))
+
 
     elif arguments.projects:
 
