@@ -28,14 +28,12 @@ BOOK:
     - "{git.proceedings}/sections.md"
     - "{git.proceedings}/chapters.md"
   - SECTIONS:
-    - "{git.bookmanager}/empty.md"
     - "{git.umaa}/paper/paper.md"
   - CHAPTERS:
     - "{git.umab}/paper/paper.md"
   - PROJECTS:
-    - "{git.bookmanager}/empty.md"
     - "{git.com}/fa18-516-08/master/project-report/report.md"
-     - "{git.umaa}/project-report/report.md"
+    - "{git.umaa}/project-report/report.md"
   - APPENDIX:
     - "{git.bookmanager}/disclaimer.md"
     - "{git.book}/preface/notation.md"
