@@ -14,6 +14,7 @@ metadata:
   dest: "dest/book"
   filename: "vonLaszewski-516-sp19.epub"
 git:
+  "com": "https://raw.githubusercontent.com/cloudmesh-community"
   "book": "https://raw.githubusercontent.com/cloudmesh-community/book/master/chapters"
   "proceedings": "https://raw.githubusercontent.com/cloudmesh-community/proceedings/master/sp19-516/"
   "umaa": "https://raw.githubusercontent.com/cloudmesh-community/hid-sp18-710/master"
@@ -25,12 +26,18 @@ BOOK:
     - "{git.proceedings}/projects.md"
     - "{git.bookmanager}/disclaimer.md"
     - "{git.book}/preface/notation.md"
-  - UMA:
+  - SECTIONS:
     - "{git.bookmanager}/empty.md"
     - NOSQL:
       - "{git.umaa}/paper/paper.md"
+  - CHAPTERS:
+    - "{git.bookmanager}/empty.md"
     - SECURITY:
       - "{git.umab}/paper/paper.md"
+  - PROJECTS:
+    - "{git.bookmanager}/empty.md"
+    - FUNCTION-AS-A-SERVICE:
+      - "{git.com}/fa18-516-08/master/project-report/report.md"
     - VIOLENCE:
       - "{git.umaa}/project-report/report.md"
   - REFERENCES:

@@ -1,17 +1,17 @@
 ---
 metadata:
   image: "cover.png"
-  title: "Intelligent Systems Engineering"
+  title: "Intelligent Systems\nEngineering"
   subtitle: "Proceedings Spring 2019"
-  author: 'G. C. Fox, G. von Laszewski, T. Balson'
-  subauthor: "Editor"
+  author: "G. C. Fox\nG. von Laszewski\nT. Balson"
+  subauthor: "Editors"
   email: "laszewski@gmail.com"
-  url: "https://github.com/cyberaide/bookmanager"
+  url: "https://github.com/cloudmesh-community/proceedings"
   description: "Book creator"
   abstract: "my abstract"
   keywords: "pandoc"
   stylesheet: "epub.css"
-  dest: "dest/book"
+  dest: "./dest/book"
   filename: "vonLaszewski-222-sp19.epub"
 git:
   "community": "https://raw.githubusercontent.com/cloudmesh-community"
@@ -24,20 +24,17 @@ project:
   "report": "master/project-report/report.md"
 BOOK:
   - PREFACE:
+    - "{git.bookmanager}/disclaimer-short.md"
     - "{git.proceedings}/contributors.md"
-    - "{git.bookmanager}/disclaimer.md"
-    - "{git.book}/preface/notation.md"
-  - P1:
+  - PROJECTS:
     - "{git.community}/sp19-222-89/master/project-report/report.md"
-  - P2:
     - "{git.community}/sp19-222-90/master/project-report/report.md"
-  - P3:
     - "{git.community}/sp19-222-92/master/project-report/report.md"
-  - P4:
     - "{git.community}/sp19-222-97/master/project-report/report.md"
-  - P5:
     - "{git.community}/sp19-222-100/master/project-report/report.md"
-  - P6:
     - "{git.community}/sp19-222-101/master/project-report/report.md"
   - REFERENCES:
     - "{git.bookmanager}/disclaimer-references.md"
+  - APPENDIX:
+    - "{git.book}/preface/notation.md"
+    - "{git.bookmanager}/disclaimer.md"
