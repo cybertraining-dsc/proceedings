@@ -22,24 +22,23 @@ git:
   "bookmanager": "https://raw.githubusercontent.com/cyberaide/bookmanager/master/bookmanager/template"
 BOOK:
   - PREFACE:
+    - "{git.bookmanager}/disclaimer-short.md"
     - "{git.proceedings}/contributors.md"
     - "{git.proceedings}/projects.md"
-    - "{git.bookmanager}/disclaimer.md"
-    - "{git.book}/preface/notation.md"
+    - "{git.proceedings}/sections.md"
+    - "{git.proceedings}/chapters.md"
   - SECTIONS:
     - "{git.bookmanager}/empty.md"
-    - NOSQL:
-      - "{git.umaa}/paper/paper.md"
+    - "{git.umaa}/paper/paper.md"
   - CHAPTERS:
-    - "{git.bookmanager}/empty.md"
-    - SECURITY:
-      - "{git.umab}/paper/paper.md"
+    - "{git.umab}/paper/paper.md"
   - PROJECTS:
     - "{git.bookmanager}/empty.md"
-    - FUNCTION-AS-A-SERVICE:
-      - "{git.com}/fa18-516-08/master/project-report/report.md"
-    - VIOLENCE:
-      - "{git.umaa}/project-report/report.md"
+    - "{git.com}/fa18-516-08/master/project-report/report.md"
+     - "{git.umaa}/project-report/report.md"
+  - APPENDIX:
+    - "{git.bookmanager}/disclaimer.md"
+    - "{git.book}/preface/notation.md"
   - REFERENCES:
     - "{git.bookmanager}/disclaimer-references.md"
 

@@ -360,6 +360,9 @@ def main():
             else:
                 entry["link"] = entry["url"] = None
 
+            if "title" not in entry:
+                entry["title"] = "TBD"
+
             title = entry["title"]
 
             url = entry["url"]

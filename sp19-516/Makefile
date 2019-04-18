@@ -1,5 +1,5 @@
 
-all: clean
+epub: clean
 	bookmanager proceedings.yml get --force
 	cp dest/*.epub ..
 	bookmanager proceedings.yml list
