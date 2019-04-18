@@ -15,7 +15,7 @@
 | [hid-sp18-602](https://github.com/cloudmesh-community/hid-sp18-602) | naredla        | Keerthi       | e616         | sp18       |
 | [hid-sp18-701](https://github.com/cloudmesh-community/hid-sp18-701) | Unni           | Sunanda       | sp17-i524    |            |
 | [hid-sp18-704](https://github.com/cloudmesh-community/hid-sp18-704) | Meier          | Zachary       | bigdata-i523 |            |
-| [sp18-709](https://github.com/cloudmesh-community/sp18-709)         | Castro         | Andres        | i523         |            |
+| [hid-sp18-709](https://github.com/cloudmesh-community/hid-sp18-709) | Castro         | Andres        | i523         |            |
 | [hid-sp18-710](https://github.com/cloudmesh-community/hid-sp18-710) | Kugan          | Uma           | i523         | fa17       |
 | [sp19-516-121](https://github.com/cloudmesh-community/sp19-516-121) | Bahramian      | Hamidreza     | e516         | sp19       |
 | [sp19-516-122](https://github.com/cloudmesh-community/sp19-516-122) | Duer           | Anthony       | e516         | sp19       |
@@ -33,7 +33,7 @@
 | [sp19-516-135](https://github.com/cloudmesh-community/sp19-516-135) | Yuo            | Xiao          | e516         | sp19       |
 | [sp19-516-136](https://github.com/cloudmesh-community/sp19-516-136) | Avila Eggleton | Joaquin       | e516         | sp19       |
 | [sp19-516-129](https://github.com/cloudmesh-community/sp19-516-129) | TBD            | TBD           | e516         | sp19       |
-| [sp19-516-129](https://github.com/cloudmesh-community/sp19-516-129) | TBD            | TBD           | e516         | sp19       |
+| [sp19-516-129](https://github.com/cloudmesh-community/sp19-516-129) | Pradhan        | Samanvitha    | e516         | sp19       |
 | [sp19-516-129](https://github.com/cloudmesh-community/sp19-516-129) | TBD            | TBD           | e516         | sp19       |
 | [sp19-616-111](https://github.com/cloudmesh-community/sp19-616-111) | Vangalapat     | Tharak        | e616         | sp19       |
-| [fa18-616-112](https://github.com/cloudmesh-community/fa18-616-112) | Joshi          | Shirish       | i616         | sp19       |
+| [sp19-616-112](https://github.com/cloudmesh-community/sp19-616-112) | Joshi          | Shirish       | i616         | sp19       |
