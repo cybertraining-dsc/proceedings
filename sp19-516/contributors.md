@@ -19,12 +19,12 @@
 | [hid-sp18-710](https://github.com/cloudmesh-community/hid-sp18-710) | Kugan          | Uma           | i523         | fa17       |
 | [sp19-516-121](https://github.com/cloudmesh-community/sp19-516-121) | Bahramian      | Hamidreza     | e516         | sp19       |
 | [sp19-516-122](https://github.com/cloudmesh-community/sp19-516-122) | Duer           | Anthony       | e516         | sp19       |
-| [sp19-516-123](https://github.com/cloudmesh-community/sp19-516-123) | Challa         | Mallik        | i516         | sp19       |
+| [sp19-516-123](https://github.com/cloudmesh-community/sp19-516-123) | Challa         | Mallik        | E516         | sp19       |
 | [sp19-516-124](https://github.com/cloudmesh-community/sp19-516-124) | Garbe          | Andrew        | e516         | sp19       |
 | [sp19-516-125](https://github.com/cloudmesh-community/sp19-516-125) | Fine           | Keli          | e516         | sp19       |
 | [sp19-516-127](https://github.com/cloudmesh-community/sp19-516-127) | Collins        | Eric          | e516         | sp19       |
 | [sp19-516-128](https://github.com/cloudmesh-community/sp19-516-128) | Rawat          | Tarun         | e516         | sp19       |
-| [sp19-516-129](https://github.com/cloudmesh-community/sp19-516-129) | TBD            | TBD           | e516         | sp19       |
+| [sp19-516-129](https://github.com/cloudmesh-community/sp19-516-129) | Ludwig         | Robert        | e516         | sp19       |
 | [sp19-516-130](https://github.com/cloudmesh-community/sp19-516-130) | Rachepalli     | Jeevan Reddy  | e516         | sp19       |
 | [sp19-516-131](https://github.com/cloudmesh-community/sp19-516-131) | Huang          | Jing          | e516         | sp19       |
 | [sp19-516-132](https://github.com/cloudmesh-community/sp19-516-132) | Gupta          | Himanshu      | e516         | sp19       |
