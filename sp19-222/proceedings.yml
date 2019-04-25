@@ -33,8 +33,8 @@ BOOK:
     - "{git.community}/sp19-222-97/master/project-report/report.md"
     - "{git.community}/sp19-222-100/master/project-report/report.md"
     - "{git.community}/sp19-222-101/master/project-report/report.md"
-  - REFERENCES:
-    - "{git.bookmanager}/disclaimer-references.md"
   - APPENDIX:
     - "{git.book}/preface/notation.md"
     - "{git.bookmanager}/disclaimer.md"
+  - REFERENCES:
+    - "{git.bookmanager}/disclaimer-references.md"

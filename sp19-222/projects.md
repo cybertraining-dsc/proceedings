@@ -1,0 +1,16 @@
+# Project List
+
+'str' object has no attribute 'update'
+'str' object has no attribute 'update'
+| Hid                                                                 | Lastname   | Firstname   | Url to md                                                                                       | Pytests   | Title                                             |
+|---------------------------------------------------------------------|------------|-------------|-------------------------------------------------------------------------------------------------|-----------|---------------------------------------------------|
+| [sp19-222-101](https://github.com/cloudmesh-community/sp19-222-101) | Bower      | Eric        | [url](https://github.com/cloudmesh-community/sp19-222-101/blob/master/project-report/report.md) |           | Spam Analysis with Spamalot                       |
+| [sp19-222-102](https://github.com/cloudmesh-community/sp19-222-102) | Danehy     | Ryan        | [url](https://github.com/cloudmesh-community/sp19-222-89/blob/master/project-report/report.md)  |           | Eye cones                                         |
+| [sp19-222-89](https://github.com/cloudmesh-community/sp19-222-89)   | Fischer    | Brandon     | [url](https://github.com/cloudmesh-community/sp19-222-89/blob/master/project-report/report.md)  |           | Eye cones                                         |
+| [sp19-222-90](https://github.com/cloudmesh-community/sp19-222-90)   | Japundza   | Ethan       | [url](https://github.com/cloudmesh-community/sp19-222-90/blob/master/project-report/report.md)  |           | Rookie Fantasy Football Predictions               |
+| [sp19-222-91](https://github.com/cloudmesh-community/sp19-222-91)   | Zhang      | Tyler       | [url](https://github.com/cloudmesh-community/sp19-222-101/blob/master/project-report/report.md) |           | Spam Analysis with Spamalot                       |
+| [sp19-222-92](https://github.com/cloudmesh-community/sp19-222-92)   | Yeagley    | Ben         | [url](https://github.com/cloudmesh-community/sp19-222-92/blob/master/project-report/report.md)  |           | Classification of Soccer Positions with Game data |
+| [sp19-222-93](https://github.com/cloudmesh-community/sp19-222-93)   | Schwantes  | Brian       | [url](https://github.com/cloudmesh-community/sp19-222-90/blob/master/project-report/report.md)  |           | Rookie Fantasy Football Predictions               |
+| [sp19-222-96](https://github.com/cloudmesh-community/sp19-222-96)   | Olson      | Mercedes    | :o: invalid                                                                                     |           | Political Bias and Voting Trends                  |
+| [sp19-222-98](https://github.com/cloudmesh-community/sp19-222-98)   | McDowell   | Xandria     | [url](https://github.com/cloudmesh-community/sp19-222-92/blob/master/project-report/report.md)  |           | Classification of Soccer Positions with Game data |
+| [sp19-222-99](https://github.com/cloudmesh-community/sp19-222-99)   | Badillo    | Jesus       | [url](https://github.com/cloudmesh-community/sp19-222-92/blob/master/project-report/report.md)  |           | Classification of Soccer Positions with Game data |
