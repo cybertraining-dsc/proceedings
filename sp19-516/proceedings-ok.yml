@@ -29,13 +29,13 @@ BOOK:
     - "{git.proceedings}/chapters.md"
   - SECTIONS:
     - "{git.umaa}/paper/paper.md"
-    - "{git.com}/sp19-516-127/master/hpc-section.md"
-    - "{git.com}/sp19-516-129/master/iso27k.md"
+    - "{git.com}/sp19-516-127/blob/master/hpc-section.md"
+    - "{git.com}/sp19-516-129/blob/master/iso27k.md"
   - CHAPTERS:
     - "{git.umab}/paper/paper.md"
-    - "{git.com}/hid-sp18-602/master/paper/paper.md"
-    - "{git.com}/sp19-616-111/master/section-code/aws-sagemaker.md"
-    - "{git.com}/sp19-516-121/master/scala.md"
+    - "{git.com}/hid-sp18-602/blob/master/paper/paper.md"
+    - "{git.com}/sp19-616-111/blob/master/section-code/aws-sagemaker.md"
+    - "{git.com}/sp19-516-121/blob/master/scala.md"
   - PROJECTS:
     - "{git.com}/fa18-516-08/master/project-report/report.md"
     - "{git.umaa}/project-report/report.md"
@@ -45,3 +45,5 @@ BOOK:
     - "{git.book}/preface/notation.md"
   - REFERENCES:
     - "{git.bookmanager}/disclaimer-references.md"
+
+"https://raw.githubusercontent.com/cloudmesh-community/sp19-516-127/master/hpc-section.md"
