@@ -12,6 +12,6 @@
 | [sp19-222-93](https://github.com/cloudmesh-community/sp19-222-93)   | Schwantes   | Brian      | e222        | sp19       |
 | [sp19-222-94](https://github.com/cloudmesh-community/sp19-222-94)   | Gotts       | Andrew     | e222        | sp19       |
 | [sp19-222-96](https://github.com/cloudmesh-community/sp19-222-96)   | Olson       | Mercedes   | e222        | sp19       |
-| [sp19-222-97](https://github.com/cloudmesh-community/sp19-222-97)   | L           | Zach       | e222        | sp19       |
+| [sp19-222-97](https://github.com/cloudmesh-community/sp19-222-97)   | Levy        | Zach       | e222        | sp19       |
 | [sp19-222-98](https://github.com/cloudmesh-community/sp19-222-98)   | McDowell    | Xandria    | e222        | sp19       |
 | [sp19-222-99](https://github.com/cloudmesh-community/sp19-222-99)   | Badillo     | Jesus      | e222        | sp19       |
