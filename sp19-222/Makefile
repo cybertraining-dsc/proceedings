@@ -5,6 +5,13 @@ epub: clean
 	cp dest/*.epub ..
 	bookmanager proceedings.yml list
 
+pdf: clean
+	rm -rf dest
+	bookmanager proceedings.yml get --force --format=pdf
+	cp dest/*.pdf ..
+	bookmanager proceedings.yml list
+
+
 artifacts: projects contrib sections chapters push
 	echo done
 
