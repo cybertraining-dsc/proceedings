@@ -13,6 +13,7 @@ metadata:
   stylesheet: "epub.css"
   dest: "./dest/book"
   filename: "vonLaszewski-222-sp19.epub"
+  date: "test"
 git:
   "community": "https://raw.githubusercontent.com/cloudmesh-community"
   "proceedings": "https://raw.githubusercontent.com/cloudmesh-community/proceedings/master/sp19-222/"
@@ -26,6 +27,7 @@ BOOK:
   - PREFACE:
     - "{git.bookmanager}/disclaimer-short.md"
     - "{git.proceedings}/contributors.md"
+    - "{git.proceedings}/editors.md"
   - "{git.community}/sp19-222-89/master/project-report/report.md"
   - "{git.community}/sp19-222-90/master/project-report/report.md"
   - "{git.community}/sp19-222-92/master/project-report/report.md"
