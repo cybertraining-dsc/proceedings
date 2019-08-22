@@ -27,14 +27,13 @@ from pathlib import Path
 
 import oyaml as yaml
 # pprint(repos)
-from cloudmesh.DEBUG import VERBOSE
+from cloudmesh.common.debug import VERBOSE
 from cloudmesh.common.dotdict import dotdict
 from cloudmesh.common.util import readfile, path_expand
-from cloudmesh.variables import Variables
+from cloudmesh.common.variables import Variables
 from cloudmesh_installer.install.installer import repos
 from docopt import docopt
 from tabulate import tabulate
-from pprint import pprint
 
 repos_516 = []
 repos_222 = []
