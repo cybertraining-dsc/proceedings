@@ -5,3 +5,6 @@ all: 222 516
 
 516:
 	cd sp19-222; make
+
+sp20:
+	cd ap20-516; make
